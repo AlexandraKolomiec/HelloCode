@@ -8,6 +8,6 @@ int zB = 10;
 
 Console.Write("расстояние между точками 2D= ");
 Console.WriteLine(Math.Sqrt((Math.Pow(xB - xA , 2) +  Math.Pow(yB - yA , 2))));
-
+//               корень квадратный ()                 число в степени (число, 2-степень)      
 Console.Write("расстояние между точками 3D= ");
 Console.WriteLine(Math.Sqrt((Math.Pow(xB - xA , 2) +  Math.Pow(yB - yA , 2) + Math.Pow(zB - zA , 2))));
