@@ -1,10 +1,26 @@
-﻿// в одномерном массиве из 123 чисел нати кол-во эл-тов из отрезка [10, 99]
-int[] array = new int[123];
-for (int i = 0; i < array.Length; i++)
+﻿// в одномерном массиве из 123 чисел найти кол-во эл-тов из отрезка [10, 99]
+   
+int[] somearray = new int[123];
+void FillArray(int[] newarray)
 {
-    array[i] = new Random().Next(0,10);
-
+    for (int i = 0; i < newarray.Length; i++)
+    {
+        newarray[i] = new Random().Next(1, 1000);
+        Console.Write($"{newarray[i]} ");
+    }
 }
-//Console.WriteLine(array[99] - array[10]);
-Console.WriteLine((array.Length - 24) - (array.Length - 113)); // 123-99=24, 123-10=113
-    
+void CheckMassNumber(int[] checkedarray)
+{
+    int NumberCounter = 0;
+    for (int j = 0; j < checkedarray.Length; j++)
+    {
+        if (checkedarray[j] < 100 && checkedarray[j] > 9) // тк [10, 99]
+        {
+            NumberCounter = NumberCounter + 1;
+        }
+    }
+Console.WriteLine("");
+Console.WriteLine($"В массиве {NumberCounter} чисел из дипазона [10,99]");
+}
+FillArray(somearray);
+CheckMassNumber(somearray);
